@@ -1,0 +1,92 @@
+body{
+  background-color: bisque;
+}
+.to-do-list{
+  font-family: cursive;
+  text-align: center;
+  margin-top: 100px;
+}
+h1{
+  color:white;
+  font-size: 4rem;
+}
+button{
+  font-size: 1.7rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+.add-button{
+  background-color: orange;
+}
+.add-button:hover{
+  background-color: rgb(97, 68, 14);
+}
+.delete-button{
+  background-color: red;
+}
+.delete-button:hover{
+  background-color: rgb(70, 7, 7);
+}
+.move-button{
+  background-color: rgb(90, 90, 217);
+}
+.move-button:hover{
+  background-color: blue;
+}
+input[type="text"]{
+  font-size: 1.6rem;
+  padding: 10px;
+  border: 2px solid blueviolet;
+  color:blueviolet
+}
+ol {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+li {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 15px 20px;
+  background-color: aliceblue;
+  margin-bottom: 10px;
+  border: 3px solid whitesmoke;
+  display: flex;
+  align-items: center;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  width: fit-content;      
+  max-width: 90%;
+  gap: 10px;
+}
+.text{
+  flex: 1;
+}
+.delete-button, .move-button{
+  padding: 8px 12px;
+  font-size: 1.4rem;
+  margin-left: 10px;
+}
+li {
+  animation: slideFadeIn 0.3s ease-in-out;
+}
+
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+button:active {
+  transform: scale(0.95);
+}
